@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 body {
-    background-image: url('space-background.jpg'); /* Replace with your image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: white; /* Ensures text is visible */
+    background-image: url('space-background.png');
+}
+
