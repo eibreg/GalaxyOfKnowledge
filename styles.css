@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family-Poppins:Wght@300;400;500;600;700;800;900&display=swap');
 
 * {
     margin: 0;
@@ -9,6 +9,7 @@
 
 body {
     color: #fff;
+    background: #09001d;
 }
 
 .header {
@@ -26,7 +27,7 @@ body {
 
 .logo {
     font-size: 32px;
-    color:#fff;
+    color: #fff;
     text-decoration: none;
     font-weight: 700;
     filter: drop-shadow(0 0 5px #09001d);
@@ -47,15 +48,22 @@ body {
 }
 
 .main {
-     min-height: 100vh;
-    background: url('Image Stuff/Galaxy.jpg') no-repeat;
+    min-height: 100vh;
+    background: url('Img/Galaxy.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+    pointer-events: auto;
+    transition: .3s ease;
+}
+
+.main.active {
+    filter: blur(15px);
+    pointer-events: none;
 }
 
 .home {
     height: 100vh;
-    width:100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,7 +90,7 @@ body {
 }
 
 .home-content .start-btn {
-    width: 190px;
+    width:190px;
     height: 55px;
     background: #c40094;
     border: 2px solid #fff;
@@ -94,7 +102,7 @@ body {
     letter-spacing: 1px;
     font-weight: 600;
     cursor: pointer;
-    transition: .5;
+    transition: .5s;
 }
 
 .home-content .start-btn:hover {
@@ -106,7 +114,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale (.9);
+    transform: translate(-50%, -50%) scale(.9);
     width: 500px;
     background: #fff;
     border-radius: 6px;
@@ -119,11 +127,12 @@ body {
 .popup-info.active {
     opacity: 1;
     pointer-events: auto;
-    transform: translate(-50%, -50%) scale (1);
+    transform: translate(-50%, -50%) scale(1);
 }
+
 .popup-info h2 {
     font-size: 50px;
-    color:#c40094;
+    color: #c40094;
 }
 
 .popup-info .info {
@@ -138,7 +147,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solider #999;
+    border-top: 1px solid #999;
     margin-top: 10px;
     padding: 15px 0 7px;
 }
@@ -149,7 +158,7 @@ body {
     align-items: center;
     width: 130px;
     height: 45px;
-    background: #c44094;
+    background: #c40094;
     border: 2px solid #c40094;
     outline: none;
     border-radius: 6px;
@@ -159,6 +168,7 @@ body {
     font-weight: 600;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     cursor: pointer;
+    transition: .5s;
 }
 
 .popup-info .btn-group .info-btn:nth-child(1) {
@@ -171,7 +181,7 @@ body {
     color: #fff;
 }
 
-.popup-info .btn-group .info-btn:nth-child(2) {
+.popup-info .btn-group .info-btn:nth-child(2):hover {
     background: #950170;
     border-color: #950170;
 }
